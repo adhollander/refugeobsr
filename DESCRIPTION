@@ -1,0 +1,16 @@
+Package: refugeobsr
+Type: Package
+Title: Functions for querying species observations within wildlife refuges
+Version: 0.1
+Date: 2015-09-21
+Authors@R: person("Allan", "Hollander", email = "adhollander@ucdavis.edu",
+               role = c("aut", "cre")):
+Description: This is a set of functions for various spatial and temporal queries
+                 of species observations from standardized datasets in relation to
+                 their presence in National Wildlife Refuges.
+License: TBD
+LazyData: TRUE
+Imports: sp,
+         rgdal,
+         data.table
+Suggests: rbison
