@@ -1,8 +1,8 @@
-require(sp)
-require(rgdal)
-require(data.table)
-
-# read in AKN files into data frame
+#` Read in AKN files into data frame
+#`
+#` @param csvfiles List of csv files to convert to data frame.
+#` @return A data frame combining the loaded csv files.
+#` @export
 readAKNcsv <- function(csvfiles) {
   dflist <- lapply(csvfiles, function(x) read.delim(x, quote=""))
   alldf <- do.call(rbind, dflist)
@@ -20,7 +20,7 @@ refugeAKNs <- function(refuge, AKNs) {
   proj4string(AKNs) <- proj4string(refuge)
   AKNs$refuge <- over(AKNs, refuge)$LABEL_NAME
   inside_refuge <- !is.na(over(AKNs, as(refuge, "SpatialPolygons")))
-  refugepts <- AKNs[inside_refuge,] 
+  refugepts <- AKNs[inside_refuge,]
   refugepts
 }
 
