@@ -8,7 +8,7 @@ Maintainer: Allan Hollander <adhollander@ucdavis.edu>
 Description: This is a set of functions for various spatial and temporal queries
                  of species observations from standardized datasets in relation to
                  their presence in National Wildlife Refuges.
-License: TBD
+License: Creative Commons CC0
 LazyData: TRUE
 Imports: sp,
          rgdal,
